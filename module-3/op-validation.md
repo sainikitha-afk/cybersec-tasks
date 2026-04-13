@@ -12,5 +12,7 @@
 - Shows that some security aspects still need manual review
 
 ## Example
-Example:
-{{ user_input | escape }}
+- `Example:
+{{ user_input | escape }}`
+
+- Output encoding ensures user input is safely displayed without executing malicious scripts like XSS.
