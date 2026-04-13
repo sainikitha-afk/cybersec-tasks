@@ -39,3 +39,8 @@ With context → much safer and closer to real-world standards
 - Basic output used session handling but lacked secure cookie settings
 - Secure prompt added proper session configurations (HttpOnly, Secure)
 - Session handling became more aligned with real-world security practices
+
+## Task 5 Update - Access Control 
+- Access control was not properly implemented in either output
+- Both versions focused on authentication but not authorization
+- Shows that LLMs may miss deeper security concepts without explicit guidance

@@ -99,3 +99,28 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
     - session regeneration mentioned 
     - better logout handling 
 
+
+## Access Control
+
+- Check authorization on every request
+- Ensure users can only access their own data
+- Restrict access to sensitive routes (admin, etc.)
+- Follow least privilege principle
+- Do not rely on frontend checks for security
+- Deny access by default if unsure
+- Separate normal user and admin functionality
+- Log and monitor access to sensitive actions
+
+## Connect to my experiment
+
+- WITHOUT context:
+    - only login system
+    - no role checks 
+    - no restrictions beyond login 
+
+- WITH context:
+    - still mostly login-based
+    - no advanced access control 
+
+- Key insight:
+    - Access control was NOT really handled in either
