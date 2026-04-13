@@ -238,3 +238,204 @@ This module is mostly about:
 - how systems connect (networking)
 - how to secure them (cloud security)
 
+## Part - 2 Contd.
+## Data Security & Encryption
+
+Encryption means converting readable data (plaintext) into unreadable form (ciphertext) using a key.
+
+Only someone with the correct key can decrypt it back.
+
+Think of it like:
+- locking data → encryption
+- key → access
+
+AWS KMS helps manage these keys so we don’t have to store them manually :contentReference[oaicite:0]{index=0}
+
+---
+
+## AWS KMS (Key Management Service)
+
+- Used to create and manage encryption keys
+- Integrated with many AWS services
+- Supports symmetric and asymmetric keys
+
+Main idea:
+👉 Don’t manage keys yourself → let AWS handle it securely
+
+---
+
+## Data Backup & Recovery
+
+Purpose:
+👉 Recover data if something goes wrong (attack, deletion, crash)
+
+### Examples:
+- RDS → automatic backups
+- S3 → versioning + replication
+- EBS → snapshots
+
+### Best Practices:
+- automate backups
+- encrypt backups
+- store in different regions
+- test recovery regularly
+
+---
+
+## DevSecOps
+
+DevSecOps = Dev + Sec + Ops
+
+👉 Security is included at every stage, not added later
+
+Idea:
+- build → test → secure → deploy
+
+“Shift Left”:
+👉 Fix security early instead of after deployment
+
+---
+
+## Secure Coding Practices
+
+- easier to build secure code than fix later
+- follow secure coding checklists
+- avoid vulnerabilities from the start
+
+---
+
+## SAST (Static Testing)
+
+- scans code WITHOUT running it
+- finds issues early
+
+Examples:
+- SonarQube
+- Snyk
+
+---
+
+## DAST (Dynamic Testing)
+
+- tests running application
+- simulates real attacks
+
+Examples:
+- Burp Suite
+- OWASP ZAP
+
+---
+
+## OWASP, CVE, CVSS
+
+### OWASP
+- list of top vulnerabilities (Top 10)
+- helps developers avoid common mistakes
+
+### CVE
+- ID for known vulnerabilities
+- format: CVE-YYYY-NUMBER
+
+### CVSS
+- score (0–10) showing severity
+- higher = more dangerous
+
+---
+
+## Logging & Alerting
+
+### Logging
+- records what happened
+- useful for debugging + security
+
+### Alerting
+- notifies when something suspicious happens
+
+Examples:
+- multiple failed logins
+- unusual access
+
+AWS tools:
+- CloudWatch → logs + monitoring
+- CloudTrail → API activity tracking
+- SNS → alerts/notifications
+
+---
+
+## Landing Zone Best Practices
+
+This is about setting up cloud securely from start.
+
+Key ideas:
+
+- IAM → least privilege
+- Network segmentation → isolate systems
+- Central logging → track everything
+- Encryption → protect data
+- Vulnerability scanning → find issues early
+
+---
+
+## Incident Response & Compliance
+
+### Incident Response
+👉 How you handle an attack
+
+Steps:
+- detect
+- respond
+- recover
+
+### Compliance
+👉 Following rules (GDPR, etc.)
+
+---
+
+## AWS Security Services
+
+### GuardDuty
+- detects threats using AI
+
+### Security Hub
+- shows all security issues in one place
+
+### Macie
+- finds sensitive data (like PII)
+
+### Inspector
+- scans for vulnerabilities
+
+### AWS Config
+- tracks configuration changes
+
+### Detective
+- helps investigate attacks
+
+### Network Firewall
+- filters traffic at network level
+
+### IAM Access Analyzer
+- checks permissions and access
+
+---
+
+## Penetration Testing
+
+- testing system like a hacker
+- allowed in AWS with rules
+
+---
+
+## Final Understanding
+
+This section is about:
+
+- protecting data (encryption + backups)
+- securing applications (SAST, DAST)
+- monitoring systems (logs, alerts)
+- handling attacks (incident response)
+- using AWS tools for security
+
+ This connects everything:
+coding + cloud + networking + security
+
