@@ -124,3 +124,28 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
 
 - Key insight:
     - Access control was NOT really handled in either
+
+## Cryptographic Practices
+
+- Use trusted libraries for encryption (don’t build your own)
+- Protect secrets like API keys and tokens
+- Never store secrets in plain text
+- Use secure random generators for tokens and IDs
+- Manage keys securely (do not hardcode them)
+- Validate data integrity using hashes or signatures
+- Do not blindly trust internal services
+
+### Approved Tools
+- AWS KMS
+- Azure Key Vault
+- HashiCorp Vault
+
+## Connect to my experiment
+
+- WITHOUT context:
+    - secret key was hardcoded
+    - no key management
+
+- WITH context:
+    - used environment variables
+    - better secret handling

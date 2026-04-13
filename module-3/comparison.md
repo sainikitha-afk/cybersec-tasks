@@ -44,3 +44,8 @@ With context → much safer and closer to real-world standards
 - Access control was not properly implemented in either output
 - Both versions focused on authentication but not authorization
 - Shows that LLMs may miss deeper security concepts without explicit guidance
+
+## Task 6 Update - Cryptographic Practices 
+- Basic output used hardcoded secrets, which is insecure
+- Secure prompt moved secrets to environment variables
+- Shows improvement in handling sensitive data
