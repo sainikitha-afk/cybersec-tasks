@@ -4,7 +4,7 @@ This is the context I used to guide the LLM toward generating safer code.
 
 ---
 
-## Input Validation (updated)
+## 1. Input Validation (updated)
 
 - Never trust user input directly
 - Validate everything on the server side
@@ -52,3 +52,50 @@ This is the context I used to guide the LLM toward generating safer code.
 - Avoid eval()
 - Use parameterized queries
 - Follow OWASP secure coding practices
+
+## 3. Authentication and Password Management
+
+- Never store passwords in plain text
+- Always hash passwords using bcrypt or argon2
+- Enforce minimum password strength (length, complexity)
+- Use HTTPS for transmitting credentials
+- Do not hardcode secrets or credentials
+- Use secure authentication frameworks instead of custom logic
+- Implement account lock after multiple failed login attempts
+- Use token-based password reset with expiry
+- Avoid revealing whether username or password is incorrect
+- Use MFA for sensitive accounts when possible
+
+### Approved Patterns
+- bcrypt / argon2 for hashing
+- OAuth2 / OIDC for authentication
+- Short-lived reset tokens
+
+### Example
+bcrypt.generate_password_hash(password)
+
+## 4. Session Management
+
+- Use server-side sessions only
+- Never expose session IDs in URLs or logs
+- Use secure cookies (HttpOnly, Secure, SameSite)
+- Always use HTTPS
+- Regenerate session ID after login
+- Expire sessions after inactivity
+- Clear session completely on logout
+- Prevent multiple concurrent sessions if needed
+
+### Example
+Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
+
+### From my  outputs:
+
+- WITHOUT context:
+    - basic session handling (flask-login)
+    - no cookie security settings 
+
+- WITH context:
+    - secure cookie configs added 
+    - session regeneration mentioned 
+    - better logout handling 
+

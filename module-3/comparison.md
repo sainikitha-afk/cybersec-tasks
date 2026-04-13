@@ -34,3 +34,8 @@ With context → much safer and closer to real-world standards
 
 ## Task 3 Update - Authentication and Password Management 
 - Authentication improved with hashing, but advanced protections like MFA and account lock were missing
+
+## Task 4 Update - Session Management 
+- Basic output used session handling but lacked secure cookie settings
+- Secure prompt added proper session configurations (HttpOnly, Secure)
+- Session handling became more aligned with real-world security practices
