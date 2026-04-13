@@ -49,3 +49,8 @@ With context → much safer and closer to real-world standards
 - Basic output used hardcoded secrets, which is insecure
 - Secure prompt moved secrets to environment variables
 - Shows improvement in handling sensitive data
+
+## Task 7 Update - Error Handling and Logging
+- Basic output had simple error messages but no structured logging
+- Secure output used safer, generic error responses
+- Logging was still not explicitly implemented

@@ -111,7 +111,7 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
 - Separate normal user and admin functionality
 - Log and monitor access to sensitive actions
 
-## Connect to my experiment
+### Connect to my experiment
 
 - WITHOUT context:
     - only login system
@@ -140,7 +140,7 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
 - Azure Key Vault
 - HashiCorp Vault
 
-## Connect to my experiment
+### Connect to my experiment
 
 - WITHOUT context:
     - secret key was hardcoded
@@ -149,3 +149,25 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
 - WITH context:
     - used environment variables
     - better secret handling
+
+
+## Error Handling and Logging
+
+- Do not expose internal errors to users
+- Use generic error messages (e.g., "Something went wrong")
+- Log detailed errors internally for debugging
+- Do not log sensitive data (passwords, tokens, etc.)
+- Log important events like login attempts and failures
+- Ensure logs are accessible only to authorized users
+- Handle errors properly instead of crashing the app
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - basic flash messages like “Login failed”
+    - no structured logging
+
+- WITH context:
+    - used generic responses like: "Invalid credentials"
+    - some awareness of security messaging
+
