@@ -171,3 +171,100 @@ Set-Cookie: session_id=xyz; Secure; HttpOnly; SameSite=Strict
     - used generic responses like: "Invalid credentials"
     - some awareness of security messaging
 
+
+## Data Protection
+
+- Encrypt sensitive data at rest and in transit (use HTTPS/TLS)
+- Never store passwords or secrets in plain text
+- Do not send sensitive data in URLs
+- Restrict access to sensitive data (least privilege)
+- Store secrets in secure configs, not in code
+- Disable unnecessary access to databases and services
+- Remove sensitive information from logs and responses
+- Ensure data is deleted when no longer needed
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - secret key hardcoded 
+    - no mention of HTTPS 
+    - no protection of data
+
+- WITH context:
+    - secrets moved to environment variables 
+    - better handling of sensitive data
+
+## System and Dependency Management
+
+- Keep dependencies and frameworks updated
+- Remove unused code and endpoints
+- Lock dependency versions
+- Avoid exposing system details in headers
+- Use least privilege for services
+- Regularly scan for vulnerabilities
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - no mention of dependency security
+    - default setup used
+
+- WITH context:
+    - not explicitly handled
+    - still requires manual security practices
+
+
+## File Handling
+
+- Validate file uploads (type, size, content)
+- Do not trust file extensions
+- Restrict allowed file types
+- Store files outside application directories
+- Prevent execution of uploaded files
+- Avoid exposing file paths
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - no file handling implemented
+
+- WITH context:
+    - not covered
+    - remains a missing area
+
+
+## Memory Management
+
+- Avoid processing unbounded input
+- Limit input sizes
+- Properly release resources after use
+- Avoid unsafe functions
+- Clear sensitive data from memory when possible
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - no memory handling considerations
+
+- WITH context:
+    - not addressed
+    - not relevant for this simple app
+
+
+## Software Supply Chain Security
+
+- Use trusted dependencies only
+- Lock dependency versions
+- Avoid using random external sources
+- Verify integrity of packages
+- Scan dependencies for vulnerabilities
+- Keep build pipelines secure
+
+### Connect to my experiment
+
+- WITHOUT context:
+    - dependencies installed without verification
+
+- WITH context:
+    - no major change
+    - still requires external tooling and setup
