@@ -31,3 +31,6 @@ With context → much safer and closer to real-world standards
 - This shows how context directly improves security
 - Example:
   username must match: ^[a-zA-Z0-9_]{3,20}$
+
+## Task 3 Update - Authentication and Password Management 
+- Authentication improved with hashing, but advanced protections like MFA and account lock were missing
