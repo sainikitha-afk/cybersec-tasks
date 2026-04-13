@@ -24,3 +24,10 @@ This experiment showed that the quality and security of LLM-generated code depen
 
 Without context → works but risky  
 With context → much safer and closer to real-world standards
+
+## Updates - Input Validation - Task 1
+- Input validation was missing in the basic prompt output
+- After adding context, validation checks were included
+- This shows how context directly improves security
+- Example:
+  username must match: ^[a-zA-Z0-9_]{3,20}$

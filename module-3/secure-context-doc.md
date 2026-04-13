@@ -4,10 +4,14 @@ This is the context I used to guide the LLM toward generating safer code.
 
 ---
 
-## Input Validation
-- Validate all user input on server side
-- Check format, length, and type
-- Reject invalid inputs
+## Input Validation (updated)
+
+- Never trust user input directly
+- Validate everything on the server side
+- Check format (email, username, etc.)
+- Check length and allowed characters
+- Reject anything unexpected
+- Prefer allow-list (what is allowed) instead of block-list
 
 ---
 
